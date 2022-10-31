@@ -1,4 +1,6 @@
 #main-visual {
+  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 #main-visual .mask {
@@ -30,38 +32,46 @@
   top: 50%;
   left: 50%;
   z-index: 2;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
   color: #fff;
+  line-height: 1.5;
   transform: translate(-50%, -50%);
 }
 #main-visual li .txt strong {
   display: block;
   margin-top: 30px;
-  font-size: 60px;
+  font-size: clamp(20px, 7.25vw, 36px);
   font-weight: 700;
 }
 
+.section {
+  height: 100vh;
+  min-height: 100vh;
+}
 .section .title-box {
   margin-bottom: 50px;
 }
 .section .title-box h2 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   color: #0e9447;
 }
 .section .title-box p {
   margin-top: 30px;
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.25;
+}
+.section .title-box p br {
+  content: "";
 }
 .section .circle-txt {
   position: absolute;
   z-index: 2;
   top: 0;
   right: 80px;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 500;
   color: #ccc;
   letter-spacing: 0.5em;
@@ -71,9 +81,12 @@
 
 #business {
   overflow: hidden;
+  height: auto;
+  min-height: 100vh;
 }
 #business .container {
   position: relative;
+  padding: 20px;
 }
 #business ul {
   display: flex;

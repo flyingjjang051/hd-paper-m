@@ -7,6 +7,7 @@ body {
   font-size: 16px;
   //min-height: 3000px;
   //background: url("../images/main/mv_01.jpg");
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -24,13 +25,15 @@ button {
 .container {
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 #header {
   height: 60px;
   color: #fff;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 99;
+  top: 0;
   &.color {
     color: #111;
     #logo {

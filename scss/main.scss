@@ -4,7 +4,8 @@
 @import "mixins";
 
 #main-visual {
-  //height: 100vh;
+  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   .mask {
     overflow: hidden;
@@ -36,9 +37,10 @@
       top: 50%;
       left: 50%;
       z-index: 2;
-      font-size: $h3;
+      font-size: 16px;
       text-align: center;
       color: #fff;
+      line-height: 1.5;
       //width: 100%;
       //transform: translateX(-50%) translateY(-50%);
       //transform: translateY(-50%);
@@ -46,7 +48,7 @@
       strong {
         display: block;
         margin-top: 30px;
-        font-size: $h1 * 1.25;
+        font-size: clamp(20px, 7.25vw, 36px);
         font-weight: 700;
       }
     }
@@ -56,18 +58,23 @@
   // height: 100vh;
   // display: flex;
   // align-items: center;
+  height: 100vh;
+  min-height: 100vh;
   .title-box {
     margin-bottom: 50px;
     h2 {
-      font-size: $h4;
+      font-size: 16px;
       font-weight: 500;
       color: $main-color;
     }
     p {
       margin-top: 30px;
-      font-size: $h2;
+      font-size: 20px;
       font-weight: 500;
       line-height: 1.25;
+      br {
+        content: "";
+      }
     }
   }
   .circle-txt {
@@ -75,7 +82,7 @@
     z-index: 2;
     top: 0;
     right: 80px;
-    font-size: $h2;
+    font-size: 18px;
     font-weight: 500;
     color: #ccc;
     letter-spacing: 0.5em;
@@ -86,8 +93,11 @@
 }
 #business {
   overflow: hidden;
+  height: auto;
+  min-height: 100vh;
   .container {
     position: relative;
+    padding: 20px;
   }
   ul {
     display: flex;

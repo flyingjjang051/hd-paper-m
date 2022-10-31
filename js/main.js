@@ -79,8 +79,8 @@ function makeCircleTxt(txt, _radius = 170, _dir = 1) {
   const circleType = new CircleType(circleTxt);
   circleType.radius(_radius).dir(_dir);
 }
-makeCircleTxt("#business .circle-txt");
-makeCircleTxt("#product .circle-txt");
+makeCircleTxt("#business .circle-txt", 50);
+makeCircleTxt("#product .circle-txt", 50);
 
 const productTL = gsap.timeline();
 const productSlider = new Swiper("#product .mask", {
@@ -150,23 +150,24 @@ new fullpage("#main", {
   navigation: true,
   navigationTooltips: ["intro", "business", "product", "news", "footer"],
   scrollOverflow: false,
+  responsiveWidth: 1024,
   onLeave: function (origin, destination, direction, trigger) {
     console.log(destination);
     if (destination.index === 1) {
-      header.classList.add("color");
+      header.addClass("color");
       businessTL.restart();
     }
     if (destination.index === 0) {
-      header.classList.remove("color");
-      fpNav.classList.remove("color");
+      header.removeClass("color");
+      fpNav.removeClass("color");
     }
     if (destination.index !== 0) {
-      fpNav.classList.add("color");
+      fpNav.addClass("color");
     }
     if (destination.isLast) {
-      fpNav.classList.add("last");
+      fpNav.addClass("last");
     } else {
-      fpNav.classList.remove("last");
+      fpNav.removeClass("last");
     }
   },
   afterLoad: function (origin, destination, direction, trigger) {
@@ -175,7 +176,7 @@ new fullpage("#main", {
     }
   },
 });
-const fpNav = document.querySelector("#fp-nav");
+const fpNav = $("#fp-nav");
 
 const depth01 = $("#gnb .depth01");
 const depth02 = $("#gnb .depth02");
