@@ -132,8 +132,16 @@ btnPlay.on("click", function () {
 });
 
 new Swiper("#news .notice-list-box", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    1280: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 window.addEventListener("scroll", function () {

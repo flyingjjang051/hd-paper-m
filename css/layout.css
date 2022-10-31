@@ -241,6 +241,11 @@ button {
 #footer {
   background-color: #333;
   color: #fff;
+  height: auto;
+  min-height: auto;
+}
+#footer .container {
+  padding: 20px;
 }
 #footer .util-box {
   padding: 30px 0;
@@ -248,20 +253,24 @@ button {
 }
 #footer .util-box .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 #footer .util-box .container ul {
   display: flex;
+  font-size: 14px;
 }
 #footer .util-box .container ul li {
-  margin-right: 30px;
+  margin-right: 10px;
   font-weight: 500;
 }
 #footer .util-box .container ul li:nth-last-child(1) {
   margin-right: 0;
 }
 #footer .addr-box {
-  padding: 30px 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 #footer .addr-box address {
   margin-bottom: 30px;
