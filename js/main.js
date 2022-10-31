@@ -144,6 +144,22 @@ new Swiper("#news .notice-list-box", {
   },
 });
 
+new Swiper("#footer .mask", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  breakpoints: {
+    480: {
+      slidesPerView: 4,
+    },
+    640: {
+      slidesPerView: 5,
+    },
+    1280: {
+      slidesPerView: 7,
+    },
+  },
+});
+
 window.addEventListener("scroll", function () {
   console.log(window.scrollY);
 });
@@ -158,7 +174,7 @@ new fullpage("#main", {
   navigation: true,
   navigationTooltips: ["intro", "business", "product", "news", "footer"],
   scrollOverflow: false,
-  responsiveWidth: 1024,
+  responsiveWidth: 800,
   onLeave: function (origin, destination, direction, trigger) {
     console.log(destination);
     if (destination.index === 1) {
